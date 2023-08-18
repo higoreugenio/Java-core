@@ -6,7 +6,7 @@ import java.util.Scanner;
 import util.Deslocamento;
 
 public class Start_deslocamento {
-
+//Bruno é gay
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
@@ -28,7 +28,7 @@ public class Start_deslocamento {
 		deslocamento.setX2(x2);
 		System.out.println(deslocamento.getX2());
 		
-		System.out.println("Informe o valor de x1: ");
+		System.out.println("Informe o valor de y2: ");
 		double y2 = sc.nextDouble();
 		deslocamento.setY2(y2);
 		System.out.println(deslocamento.getY2());
