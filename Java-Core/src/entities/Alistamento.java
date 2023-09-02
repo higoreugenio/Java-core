@@ -2,9 +2,9 @@ package entities;
 
 public class Alistamento {
 	
-	private String dados[] = new String[8];
+	public String dados[] = new String[8];
 	
-	private double multa;
+	public double multa;
 
 	 
 	public Alistamento(String nome, int anoNascimento, String nomeMae, String nomePai, int telefone, String email,
@@ -20,11 +20,12 @@ public class Alistamento {
 	 
 	}
 	
-	public void VerificarData() {
+	public boolean VerificarData() {
 		int idade = 2023 - Integer.parseInt(dados[1]);
-		if (idade < 18 && idade > 45) {
+		if (idade <= 18 && idade >= 45) {
 			System.out.println("Você não pode se cadastrar");
 		}
+		return false;
 	}
 
 	public void CalcularMulta() {
@@ -51,10 +52,10 @@ public class Alistamento {
 		System.out.println("E-mail: " + dados[5]);
 		System.out.println("altura: " + dados[6]);
 		System.out.println("Peso: " + dados[7]);
-		if (multa < 0) {
+		if (multa > 0) {
 			System.out.print("ATENÇÃO: Multa de R$" + multa);
 		}
-		return;
+		
 		
 	}
 

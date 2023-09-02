@@ -12,14 +12,19 @@ public class AlistamentoCadastro {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		
-		
-		System.out.print("Informe sua data de nascimento: ");
+		System.out.print("Informe seu ano de nascimento: ");
 		int anoDeNascimento = sc.nextInt();
 		
 		Alistamento alistamento = new Alistamento(null, anoDeNascimento, null, null, 0, null, 0, 0, 0);
 		
+		 if (alistamento.VerificarData()) {
+	            
+	        } else {
+	            System.out.println("You cannot register for enlistment.");
+	        }
+		
 		alistamento.mostraDados();
+		
 		
 		sc.close();
 	}
